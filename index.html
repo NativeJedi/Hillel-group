@@ -85,50 +85,6 @@
         getRobotSchema(robot) === [['version', 'number'], ['name', 'string'], ['coords', 'object']]
       </code>
     </pre>
+  </div>
 </body>
-<script>
-	//1. Task
-	const user = { firstName: 'Ivan', lastName: 'Vasylchenko' };
-
-	function addFullName(arr){
-		arr.fullName = arr.firstName + ' ' + arr.lastName;
-	}
-	addFullName(user);
-
-    console.log(user);
-    //2. Task
-    const users = [
-          {
-            firstName: undefined,
-            lastName: 'Holy',
-            fullName: 'Jack Holy',
-          },
-          {
-            firstName: undefined,
-            lastName: 'Doe',
-            fullName: 'John Doe',
-          }
-        ];
-
-    function restoreNames(obj){
-    	obj.forEach(user => {
-    		if (typeof user.firstName === 'undefined') {
-    			user.firstName = user.fullName.split(' ')[0];
-    		}
-    	})
-    }
-    restoreNames(users);
-    console.log(users)
-    //3. Task
-    const robot = {
-          version: 16,
-          name: 'Cleaner 3000',
-          coords: [345, 12],
-        };
-    function getRobotSchema(obj){
-    	return obj = Object.entries(obj)
-    }	
-	console.log(getRobotSchema(robot))
-    
-</script>
 </html>
