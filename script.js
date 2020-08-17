@@ -36,3 +36,23 @@ users.forEach( (value => {
         restoreNames(value);
     }
 }) );
+
+//Task 3
+
+const robot = {
+    version: 16,
+    name: 'Cleaner 3000',
+    coords: [345, 12],
+};
+
+function getRobotSchema(object) {
+    const typeArr = [];
+    for (const key in object) {
+        if (object.hasOwnProperty(key)) {
+            typeArr.push([key, typeof object[key]]);
+        }
+    }
+    return typeArr;
+}
+
+const robotSchema = getRobotSchema(robot);
