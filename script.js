@@ -11,3 +11,28 @@ function addFullName(user) {
 
 addFullName(user);
 
+//Task 2
+
+const users = [
+    {
+        firstName: 'Ivan',
+        lastName: 'Vasylchenko',
+        fullName: 'Ivan Vasylchenko'
+    },
+    {
+        firstName: undefined,
+        lastName: 'Holy',
+        fullName: 'Jack Holy',
+    },
+];
+
+function restoreNames(user) {
+    const [name] = user.fullName.split(' ');
+    user.firstName = name;
+}
+
+users.forEach( (value => {
+    if (!value.firstName) {
+        restoreNames(value);
+    }
+}) );
