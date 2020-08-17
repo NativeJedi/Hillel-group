@@ -24,10 +24,27 @@ const users = [
 
 function restoreNames(users) {
     users.forEach((users) => {
-        const restoredName = users.fullName.replace(users.lastName,'');
+        const restoredName = users.fullName.replace(users.lastName, '');
         users.firstName = restoredName;
     });
 }
 
 restoreNames(users);
 console.log(users);
+
+//Задание 3
+
+const robot = {
+    version: 16,
+    name: 'Cleaner 3000',
+    coords: [345, 12],
+};
+
+function getRobotSchema() {
+
+    const keyAndValue = Object.entries(robot);
+    const keyAndType = keyAndValue.map(([key, value]) => [key, typeof value]);
+    return keyAndType;
+}
+
+console.log(getRobotSchema(robot));
