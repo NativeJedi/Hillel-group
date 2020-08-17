@@ -119,5 +119,19 @@
     }
     restoreNames(users);
     console.log(users);
+    //3. Task
+    const robot = {
+          version: 16,
+          name: 'Cleaner 3000',
+          coords: [345, 12],
+        };
+    function getRobotSchema(obj) {
+      const result = Object.entries(obj);
+      for (let i = 0; i < result.length; i++) {
+          result[i][1] = typeof result[i][1];
+      }
+      return result
+    }
+	console.log(getRobotSchema(robot));
 </script>
 </html>
