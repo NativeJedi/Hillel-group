@@ -11,3 +11,23 @@ function adFullName(user) {
 
 adFullName(user);
 console.log(user);
+
+
+//Задание 2
+const users = [
+    {
+        firstName: undefined,
+        lastName: 'Holy',
+        fullName: 'Jack Holy',
+    },
+];
+
+function restoreNames(users) {
+    users.forEach((users) => {
+        const restoredName = users.fullName.replace(users.lastName,'');
+        users.firstName = restoredName;
+    });
+}
+
+restoreNames(users);
+console.log(users);
