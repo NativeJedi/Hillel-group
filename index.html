@@ -125,15 +125,20 @@
           name: 'Cleaner 3000',
           coords: [345, 12],
         };
+
     function getRobotSchema(obj) {
       const result = Object.entries(obj);
 
-      // Не используй for, у нас есть отличные и удобные методы массивов
-      for (let i = 0; i < result.length; i++) {
-          result[i][1] = typeof result[i][1]; // Переменные?
-      }
+      result.map(el => el[1] = typeof el[1]); //В 1 строку, если не понравится ниже вариант с переменными:D
+
+      // result.map(el => {
+      // 	const entryEl = el[1];
+      // 	const typeValue = typeof entryEl;
+      // 	el[1] = typeValue;
+      // })
+      
       return result
     }
-	console.log(getRobotSchema(robot));
+    console.log(getRobotSchema(robot));
 </script>
 </html>
