@@ -6,7 +6,7 @@ const user = {
 }
 
 function adFullName(user) {
-    user.fullname = user.firstName + ' ' + user.lastName;
+    user.fullname = `${user.firstName} ${user.lastName}`;
 }
 
 adFullName(user);
@@ -24,8 +24,8 @@ const users = [
 
 function restoreNames(users) {
     users.forEach((users) => {
-        const restoredName = users.fullName.replace(users.lastName, '');
-        users.firstName = restoredName;
+        const restoredName = users.fullName.split(' ');
+        users.firstName = restoredName[0];
     });
 }
 
