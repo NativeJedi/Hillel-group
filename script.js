@@ -6,7 +6,7 @@ const user = {
 
 function addFullName(user) {
     const field = 'fullName';
-    user[field] = user.firstName + ' ' + user.lastName;
+    user[field] = user.firstName + ' ' + user.lastName; // лучше использовать шаблонные строки
 }
 
 addFullName(user);
@@ -27,7 +27,7 @@ const users = [
 ];
 
 function restoreNames(user) {
-    const [name] = user.fullName.split(' ');
+    const [name] = user.fullName.split(' '); // деструктуризаци, гуд
     user.firstName = name;
 }
 
@@ -47,6 +47,7 @@ const robot = {
 
 function getRobotSchema(object) {
     const typeArr = [];
+    // У нас есть отличные методы массива для итерации
     for (const key in object) {
         if (object.hasOwnProperty(key)) {
             typeArr.push([key, typeof object[key]]);
