@@ -6,7 +6,7 @@ const user = {
 }
 
 function adFullName(user) {
-    user.fullname = user.firstName + ' ' + user.lastName;
+    user.fullname = user.firstName + ' ' + user.lastName; // Используй шаблонные строки
 }
 
 adFullName(user);
@@ -25,6 +25,9 @@ const users = [
 function restoreNames(users) {
     users.forEach((users) => {
         const restoredName = users.fullName.replace(users.lastName, '');
+        // Реплейс используется немного не для этого
+        // Тут лучше разбить строку по пробелу в массив и достать с него имя
+
         users.firstName = restoredName;
     });
 }
