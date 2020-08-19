@@ -73,7 +73,7 @@
 
       Приклад:
     </p>
-  
+
     <pre>
       <code>
         const robot = {
@@ -81,7 +81,7 @@
           name: 'Cleaner 3000',
           coords: [345, 12],
         };
-      
+
         getRobotSchema(robot) === [['version', 'number'], ['name', 'string'], ['coords', 'object']]
       </code>
     </pre>
@@ -127,8 +127,10 @@
         };
     function getRobotSchema(obj) {
       const result = Object.entries(obj);
+
+      // Не используй for, у нас есть отличные и удобные методы массивов
       for (let i = 0; i < result.length; i++) {
-          result[i][1] = typeof result[i][1];
+          result[i][1] = typeof result[i][1]; // Переменные?
       }
       return result
     }
