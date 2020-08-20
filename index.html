@@ -91,7 +91,7 @@
 	const user = { firstName: 'Ivan', lastName: 'Vasylchenko' };
 
 	function addFullName(arr){
-		arr.fullName = arr.firstName + ' ' + arr.lastName;
+		arr.fullName = arr.firstName + ' ' + arr.lastName; // use template strings
 	}
 	addFullName(user);
 
@@ -129,15 +129,17 @@
     function getRobotSchema(obj) {
       const result = Object.entries(obj);
 
-      result.map(el => el[1] = typeof el[1]); //В 1 строку, если не понравится ниже вариант с переменными:D
+      result.map(el => el[1] = typeof el[1]); // map у тебя возвращает новый массив, который ты игнорируешь
+      // Если уже игнорируешь массив на выходе, то используй forEach
 
-      // result.map(el => {
-      // 	const entryEl = el[1];
-      // 	const typeValue = typeof entryEl;
-      // 	el[1] = typeValue;
-      // })
-      
-      return result
+      // А вообще красиво было бы так
+      // return Object.entries(obj).map((el) => {
+      //   const key = el[0];
+      //   const valueType = typeof el[1];
+      //
+      //   return [key, valueType];
+      // });
+      return result;
     }
     console.log(getRobotSchema(robot));
 </script>
