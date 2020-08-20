@@ -1,0 +1,31 @@
+{
+    "name": "hillel-group",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "build": "webpack",
+      "start": "webpack-dev-server"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/NativeJedi/Hillel-group.git"
+    },
+    "author": "RL",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/NativeJedi/Hillel-group/issues"
+    },
+    "homepage": "https://github.com/NativeJedi/Hillel-group#readme",
+    "dependencies": {},
+    "devDependencies": {
+      "@babel/core": "^7.11.1",
+      "@babel/preset-env": "^7.11.0",
+      "babel-loader": "^8.1.0",
+      "babel-preset-es2015": "^6.24.1",
+      "babel-register": "^6.26.0",
+      "jsxobj": "^1.1.0",
+      "webpack": "^4.44.1",
+      "webpack-cli": "^3.3.12"
+    }
+  }
