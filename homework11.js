@@ -25,21 +25,33 @@ const users = [{
         firstName: 'Chloe',
         lastName: 'Tilbery',
         fullName: 'Chloe Tilbery',
-    },];
+    },
+];
 
 function restoreNames(user) {
     const [lossName] = user.fullName.split(' ');
     user.firstName = lossName;
 }
 
-users.forEach( (name => {
+users.forEach((name => {
     if (!name.firstName) {
         restoreNames(name);
         console.log(users);
     }
-}) );
+}));
 
 
+// Task3
 
+const robot = {
+    version: 16,
+    name: 'Cleaner 3000',
+    coords: [345, 12],
+};
 
+function getRobotSchema(obj) {
+    return Object.entries(obj).map(([key, value]) => [key, typeof value]);
+}
 
+const robotTerminal = getRobotSchema(robot);
+console.log(robotTerminal);
