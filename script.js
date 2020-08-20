@@ -43,7 +43,8 @@ const users = [
 function restoreNames(passedUsers) {
     passedUsers.forEach(el => {
         if (el.firstName === undefined) {
-            const tempFirstName = el.fullName.replace(el.lastName, "").trim();
+            const tempFirstName = el.fullName.replace(el.lastName, "").trim(); // Лучше разбить на массив по пробелу
+            // и из массива достать имя. Реплейс используется немного не для таких кейсов
             el.firstName = tempFirstName;
         }
     });
