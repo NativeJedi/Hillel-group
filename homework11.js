@@ -1,5 +1,6 @@
 "use strict"
 
+
 // Task1
 
 const user = {
