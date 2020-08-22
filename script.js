@@ -6,7 +6,7 @@ const user = {
 };
 
 function addFullName(user) {
-    user.fullName = user.firstName + ' ' + user.lastName;
+    user.fullName = user.firstName + ' ' + user.lastName; // Используй щаблонные строки ``
 };
 
 addFullName(user);
