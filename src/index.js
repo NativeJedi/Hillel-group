@@ -1,22 +1,13 @@
-import {sum} from "./math";
+// import sum from '/math.js';
 import './style.css';
 import './style.scss';
 
-function checkField(obj) {
-    return obj?.credentials?.name;
-}
+// function checkField(obj) { return obj?.credentials?.name; }
 
-console.log(checkField({
-    credentials: {
-        name: 'adsd',
-    }
-}));
+// console.log(checkField({ credentials: { name: 'adsd' } }));
 
-function getArrField(arr) {
-    return arr?.[0]?.name;
-}
+// function getArrField(arr) { return arr?.[0]?.name; }
 
-console.log(sum(2,2));
+// console.log(sum(2, 2));
 
-console.log(getArrField([]))
-
+// console.log(getArrField([]));
