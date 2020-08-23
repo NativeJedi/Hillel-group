@@ -1,0 +1,15 @@
+$font-stack:    Helvetica, sans-serif;
+$primary-color: #ff0000;
+$myFavoriteColor: #000000;
+body {
+  font: 100% $font-stack;
+  background-color: $primary-color;
+  color: $myFavoriteColor;
+}
+#test,p,h1,h2{
+  color: #fff000;
+}
+
+#test{
+  font-size: 21px;
+}
