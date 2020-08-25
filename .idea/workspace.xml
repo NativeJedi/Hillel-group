@@ -3,39 +3,14 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
-  <component name="BranchesTreeState">
-    <expand>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:github" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-    </expand>
-    <select>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="BRANCH:origin/DOM_basics" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-    </select>
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="4566dca3-39d0-4344-afa5-c1d3abdec6da" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="4ed3ffd3-c736-4874-91b4-509433ab88f5" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/assets/styles/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/assets/styles/main.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/task1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/task2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,19 +20,54 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1gSPMyphhn5hyOj6QoFi0cUOqS6" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="2" id="Add" />
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="2" />
+    <option name="recentBranches">
+      <RecentBranches>
+        <option name="branchesForRepo">
+          <list>
+            <RecentBranchesForRepo>
+              <option name="branches">
+                <list>
+                  <RecentBranch>
+                    <option name="branchName" value="DOM_basics" />
+                    <option name="lastUsedInstant" value="1598201698" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="webpack" />
+                    <option name="lastUsedInstant" value="1598160471" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="master" />
+                    <option name="lastUsedInstant" value="1597834883" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="alex_kyrychenko" />
+                    <option name="lastUsedInstant" value="1597827228" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="dmytro_karachan" />
+                    <option name="lastUsedInstant" value="1597826654" />
+                  </RecentBranch>
+                </list>
+              </option>
+              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
+            </RecentBranchesForRepo>
+          </list>
+        </option>
+      </RecentBranches>
+    </option>
   </component>
+  <component name="ProjectId" id="1gJDabfqoU6bhys1MUo62g0g4dD" />
   <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="Git.Branch.Popup.ShowAllRemotes" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -67,110 +77,53 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="settings.javascript.linters.eslint" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Job\hillel\Hillel-group\src" />
+      <recent name="D:\Job\hillel\Hillel-group\src\html" />
+      <recent name="D:\Job\hillel\Hillel-group\src\app\assets" />
+      <recent name="D:\Job\hillel\Hillel-group\src\app" />
+      <recent name="D:\Job\hillel\Hillel-group\src\public" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="4566dca3-39d0-4344-afa5-c1d3abdec6da" name="Default Changelist" comment="" />
-      <created>1598104982393</created>
+      <changelist id="4ed3ffd3-c736-4874-91b4-509433ab88f5" name="Default Changelist" comment="" />
+      <created>1597823866031</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1598104982393</updated>
-      <workItem from="1598104984825" duration="33000" />
-      <workItem from="1598170063858" duration="4025000" />
-      <workItem from="1598199414248" duration="9000" />
-      <workItem from="1598341557603" duration="1901000" />
+      <updated>1597823866031</updated>
+      <workItem from="1597823867423" duration="2887000" />
+      <workItem from="1597834871036" duration="7984000" />
+      <workItem from="1597872654394" duration="1330000" />
+      <workItem from="1597908996081" duration="15000" />
+      <workItem from="1597920169471" duration="131000" />
     </task>
-    <task id="LOCAL-00001" summary="1">
-      <created>1598343461871</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1598343461871</updated>
-    </task>
-    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="TerminalProjectNonSharedOptionsProvider">
+    <option name="shellPath" value="D:\Soft\Git\bin\bash.exe" />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="Vcs.Log.History.Properties">
-    <option name="COLUMN_ORDER">
-      <list>
-        <option value="0" />
-        <option value="2" />
-        <option value="3" />
-        <option value="1" />
-      </list>
-    </option>
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="origin/DOM_basics" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="1" />
-    <option name="LAST_COMMIT_MESSAGE" value="1" />
-  </component>
   <component name="WindowStateProjectService">
-    <state x="501" y="299" key="#ESLint" timestamp="1598182455750">
-      <screen x="0" y="0" width="1280" height="800" />
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1598162036882">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="501" y="299" key="#ESLint/0.0.1280.800@0.0.1280.800" timestamp="1598182455750" />
-    <state x="378" y="154" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1598341590552">
-      <screen x="0" y="0" width="1280" height="800" />
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1598162036882" />
+    <state x="542" y="153" key="FileChooserDialogImpl" timestamp="1597909009082">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="378" y="154" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.800@0.0.1280.800" timestamp="1598341590552" />
-    <state x="226" y="0" key="CommitChangelistDialog2" timestamp="1598343461452">
-      <screen x="0" y="0" width="1280" height="800" />
+    <state x="542" y="153" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1597909009082" />
+    <state x="300" y="57" key="SettingsEditor" timestamp="1598162988084">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="226" y="0" key="CommitChangelistDialog2/0.0.1280.800@0.0.1280.800" timestamp="1598343461452" />
-    <state x="138" y="69" key="DiffContextDialog" timestamp="1598342582701">
-      <screen x="0" y="0" width="1280" height="800" />
+    <state x="300" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1598162988084" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1598162977478">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="138" y="69" key="DiffContextDialog/0.0.1280.800@0.0.1280.800" timestamp="1598342582701" />
-    <state x="502" y="304" width="414" height="192" key="Github.ShareDialog" timestamp="1598341778126">
-      <screen x="0" y="0" width="1280" height="800" />
-    </state>
-    <state x="502" y="304" width="414" height="192" key="Github.ShareDialog/0.0.1280.800@0.0.1280.800" timestamp="1598341778126" />
-    <state x="399" y="109" key="RollbackChangesDialog" timestamp="1598342938298">
-      <screen x="0" y="0" width="1280" height="800" />
-    </state>
-    <state x="399" y="109" key="RollbackChangesDialog/0.0.1280.800@0.0.1280.800" timestamp="1598342938298" />
-    <state x="141" y="39" key="SettingsEditor" timestamp="1598181167125">
-      <screen x="0" y="0" width="1280" height="800" />
-    </state>
-    <state x="141" y="39" key="SettingsEditor/0.0.1280.800@0.0.1280.800" timestamp="1598181167125" />
-    <state x="438" y="321" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1598342776432">
-      <screen x="0" y="0" width="1280" height="800" />
-    </state>
-    <state x="438" y="321" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.800@0.0.1280.800" timestamp="1598342776432" />
-    <state x="398" y="120" key="git4idea.branch.GitSmartOperationDialog" timestamp="1598343404845">
-      <screen x="0" y="0" width="1280" height="800" />
-    </state>
-    <state x="398" y="120" key="git4idea.branch.GitSmartOperationDialog/0.0.1280.800@0.0.1280.800" timestamp="1598343404845" />
-    <state x="305" y="124" width="670" height="676" key="search.everywhere.popup" timestamp="1598181161266">
-      <screen x="0" y="0" width="1280" height="800" />
-    </state>
-    <state x="305" y="124" width="670" height="676" key="search.everywhere.popup/0.0.1280.800@0.0.1280.800" timestamp="1598181161266" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1598162977478" />
   </component>
 </project>

@@ -1,17 +1,15 @@
 module.exports = {
-  env: {
-    browser: true,
-    es2020: true,
-    node: true,
-  },
+  parser: 'babel-eslint',
   extends: [
     'eslint:recommended',
     'airbnb-base',
   ],
-  parserOptions: {
-    ecmaVersion: 11,
-    sourceType: 'module',
+  env: {
+    node: true,
+    browser: true,
+    es6: true,
   },
   rules: {
+    'linebreak-style': 0,
   },
 };
