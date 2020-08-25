@@ -3,15 +3,16 @@
 
 //mission 1
 
-// const user = { firstName: 'Ivan', lastName: 'Vasylchenko'};
+const user = { firstName: 'Ivan', lastName: 'Vasylchenko'};
 
-// function addFullName () {
-//    return `${user.firstName} ${user.lastName} ${user.fullName = user.firstName + ' ' + user.lastName}`;
-// };
+function addFullName (user) {
+   user.fullName = user.firstName + ' ' + user.lastName;
+};
 
-// addFullName(user);
+addFullName(user);
 
-// console.log(user);
+console.log(user);
+
 
 
 
@@ -32,15 +33,15 @@
 
 // mission 3
 
-const robot = {
-    version: 16,
-    name: 'Cleaner 3000',
-    coords: [345, 12],
-};
+// const robot = {
+//     version: 16,
+//     name: 'Cleaner 3000',
+//     coords: [345, 12],
+// };
 
-function getRobotSchema(robot) {
-    return Object.entries(robot).map(([key, value]) => [key, typeof value]);
-}
+// function getRobotSchema(robot) {
+//     return Object.entries(robot).map(([key, value]) => [key, typeof value]);
+// }
 
-const robotInfo = getRobotSchema(robot);
-console.log(robotInfo);
+// const robotInfo = getRobotSchema(robot);
+// console.log(robotInfo);
