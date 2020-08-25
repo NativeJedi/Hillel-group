@@ -1,4 +1,6 @@
+// import { sum } from "./math";
 
-  import './js/common.js'
-  import './css/main.css'
-  import './scss/main.scss'
+// console.log(sum(2, 2));
+
+import './css/main.css';
+import './scss/main.scss'
