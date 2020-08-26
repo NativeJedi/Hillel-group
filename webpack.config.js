@@ -1,5 +1,4 @@
 const path = require('path');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const {
   CleanWebpackPlugin
 } = require('clean-webpack-plugin');
@@ -13,7 +12,6 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, './dist'),
     filename: '[name].js',
-    publicPath: '/dist'
   },
   module: {
     rules: [{
@@ -50,14 +48,10 @@ module.exports = {
     contentBase: path.resolve(__dirname, 'dist'),
   },
   plugins: [
+    new MiniCssExtractPlugin(),
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       template: path.join(__dirname, 'index.html'),
     }),
-  ],
-  plugins: [
-    new MiniCssExtractPlugin({
-      filename: "[name].css",
-    })
   ],
 };
