@@ -27,7 +27,7 @@ function displayCalcData(calcResult, resultFieldSelector) {
 
     const calcResultStr = calcResultArr.join("");
 
-    resultField.innerHTML = calcResultStr;
+    resultField.textContent = calcResultStr;
 }
 
 function toDoTask1() {
