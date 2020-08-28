@@ -8,8 +8,8 @@ let schema = getRobotSchema(robot);
 console.log(schema);
 
 function getRobotSchema(robot){
-	var result = [];
-	for(var field in robot){
+	let result = [];
+	for(let field in robot){
 		result.push([field, typeof robot[field] ]);
 	}
 	return result;
