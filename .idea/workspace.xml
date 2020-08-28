@@ -3,10 +3,27 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="4ed3ffd3-c736-4874-91b4-509433ab88f5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hillel-group" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -103,7 +120,9 @@
       <workItem from="1598346724645" duration="121000" />
       <workItem from="1598347211566" duration="765000" />
       <workItem from="1598348218086" duration="853000" />
-      <workItem from="1598419751191" duration="10239000" />
+      <workItem from="1598419751191" duration="26805000" />
+      <workItem from="1598564071946" duration="69000" />
+      <workItem from="1598564171445" duration="1452000" />
     </task>
     <servers />
   </component>
@@ -111,17 +130,30 @@
     <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="501" y="119" width="713" height="600" key="#ESLint" timestamp="1598426606660">
+    <state x="501" y="119" width="713" height="600" key="#ESLint" timestamp="1598456223180">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="501" y="119" width="713" height="600" key="#ESLint/0.0.1280.800@0.0.1280.800" timestamp="1598426606660" />
+    <state x="501" y="119" width="713" height="600" key="#ESLint/0.0.1280.800@0.0.1280.800" timestamp="1598456223180" />
     <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1598162036882">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1598162036882" />
+    <state x="128" y="69" key="DiffContextDialog" timestamp="1598451661776">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="128" y="69" key="DiffContextDialog/0.0.1280.800@0.0.1280.800" timestamp="1598451661776" />
     <state x="542" y="153" key="FileChooserDialogImpl" timestamp="1597909009082">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -147,6 +179,10 @@
     </state>
     <state x="250" y="55" key="SettingsEditor/0.0.1280.800@0.0.1280.800" timestamp="1598426654796" />
     <state x="300" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1598162988084" />
+    <state x="240" y="140" key="Vcs.Push.Dialog.v2" timestamp="1598451669560">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="240" y="140" key="Vcs.Push.Dialog.v2/0.0.1280.800@0.0.1280.800" timestamp="1598451669560" />
     <state x="359" y="141" width="670" height="659" key="search.everywhere.popup" timestamp="1598426648127">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
