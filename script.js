@@ -1,14 +1,16 @@
-const users = [
-    { lastName: 'Smith', fullName: 'Bob Smith' },
-	{ lastName: 'Tkachenko', fullName: 'Alex  Tkachenko'}];
-restoreNames(users);
-console.log(users);
+const robot = {
+	version: 16,
+	name: 'Cleaner 3000',
+	coords: [354, 12]
+};
 
-function restoreNames(users){
-    users.forEach(function(user){
-		if(user.firstName) return;
-		if(!user.fullName) return;
-		
-		user.firstName = user.fullName.split(' ')[0];
-	});
+let schema = getRobotSchema(robot);
+console.log(schema);
+
+function getRobotSchema(robot){
+	var result = [];
+	for(var field in robot){
+		result.push([field, typeof robot[field] ]);
+	}
+	return result;
 }
