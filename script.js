@@ -1,10 +1,14 @@
-function addFullName(user){
-    let fName = user.firstName ? user.firstName : '';
-	let lName = user.lastName ? user.lastName : '';
-	user.fullName = [fName, lName].join(' ').trim();
+const users = [
+    { lastName: 'Smith', fullName: 'Bob Smith' },
+	{ lastName: 'Tkachenko', fullName: 'Alex  Tkachenko'}];
+restoreNames(users);
+console.log(users);
+
+function restoreNames(users){
+    users.forEach(function(user){
+		if(user.firstName) return;
+		if(!user.fullName) return;
+		
+		user.firstName = user.fullName.split(' ')[0];
+	});
 }
-
-
-const user = { firstName: 'Bob', lastName: 'Smith' };
-addFullName(user);
-console.log(user);
