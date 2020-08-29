@@ -1,90 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
 <body>
-  <h1>Homework</h1>
-
-  <div>
-    <h2>Завдання 1</h2>
-    <p>База даних зберігає в собі інформацію про користувачів у вигляді:</p>
-    <pre>
-      <code>
-        {
-          firstName: Ivan,
-          lastName: Vasylchenko,
-        }
-      </code>
-    </pre>
-    <p>
-      Приклад:
-      Буде зручно мати поле fullName у об'єкті. Створи функцію addFullName,
-      яка буде додавати поле fullName з рядком {{user.firstName}} {{user.lastName}}для user,
-      якого вона прийматиме. Повертати з функції нічого не потрібно.
-    </p>
-    <pre>
-      <code>
-        const user = { firstName: 'Ivan', lastName: 'Vasylchenko' };
-        addFullName(user);
-        // user === { firstName: 'Ivan', lastName: 'Vasylchenko', fullName: 'Ivan Vasylchenko' }
-      </code>
-    </pre>
-  </div>
-
-  <div>
-    <h2>Завдання 2</h2>
-    <p>
-      В базі даних користувачів стався збій. У деяких користувачів зникли значення з поля firstName,
-      добре що у user вже є поле fullName, з якого ми можемо взяти потрібні дані.
-      Давай повернено імена користувачам users у яких firstName рівне undefined за допомогою функції restoreNames.
-      Повертати з функції нічого не потрібно.
-
-      Приклад:
-    </p>
-    <pre>
-      <code>
-        const users = [
-          ...,
-          {
-            firstName: undefined,
-            lastName: 'Holy',
-            fullName: 'Jack Holy',
-          },
-          ...,
-        ];
-        restoreNames(users)
-        // users === [..., {firstName: 'Jack', lastName: 'Holy', fullName: 'Jack Holy'}, ...]
-      </code>
-    </pre>
-  </div>
-
-  <div>
-    <h2>Завдання 3</h2>
-    <p>
-      Вночі у головного інженера зі столу хтось потягнув схему,
-      за якою ми виготовляли наших роботів.
-      Тепер ми не знаємо, які дані потрібні для робота, щоб він працював коректно.
-      Пропоную зловити одного робота, що зараз прибирає у коридорі, підключитися до його терміналу і дізнатися,
-      які поля нам потрібні для нових роботів. Створи функцію getRobotSchema, яка приймає об'єкт robot і повертає набір ключів і типи значень,
-      які в них мають зберігатися. Результат має виглядати ось так: [[key, type], [key, type]...]
-
-      Приклад:
-    </p>
-
-    <pre>
-      <code>
-        const robot = {
-          version: 16,
-          name: 'Cleaner 3000',
-          coords: [345, 12],
-        };
-
-        getRobotSchema(robot) === [['version', 'number'], ['name', 'string'], ['coords', 'object']]
-      </code>
-    </pre>
-  </div>
+    <div class="container">
+        <h1>Task 1: TOP 10 LARGEST COUNTRIES BY POPULATION</h1>
+        <div class="task">
+          <p>Посчитайте суммарную и среднюю популяцию всех стран. Результат занесите внутрь элемента с надписью Calculate it!</p>
+        </div>
+        <ol class="list">
+          <li class="list__item">
+            <div>
+              <img src="public/images/flag-china.gif" alt="China flag">
+              China:
+            </div>
+            <span class="population">1,439,234,240</span>
+          </li>
+          <li class="list__item">
+            <div>
+              <img src="public/images/flag-india.gif" alt="India flag">
+              India:
+            </div>
+            <span class="population">1,379,784,212</span>
+          </li>
+          <li class="list__item">
+            <div>
+              <img src="public/images/flag-usa.gif" alt="USA flag">
+              USA:
+            </div>
+            <span class="population">330,971,314</span>
+          </li>
+          <li class="list__item">
+            <div>
+              <img src="public/images/flag-indonesia.gif" alt="Indonesia flag">
+              Indonesia:
+            </div>
+            <span class="population">273,476,730</span>
+          </li>
+          <li class="list__item">
+            <div>
+              <img src="public/images/flag-pakistan.gif" alt="Pakistan flag">
+              Pakistan:
+            </div>
+            <span class="population">220,822,025</span>
+          </li>
+          <li class="list__item">
+            <div>
+              <img src="public/images/flag-brazil.gif" alt="Brazil flag">
+              Brazil:
+            </div>
+            <span class="population">220,822,025</span>
+          </li>
+          <li class="list__item">
+            <div>
+              <img src="public/images/flag-nigeria.gif" alt="Nigeria flag">
+              Nigeria:
+            </div>
+            <span class="population">220,822,025</span>
+          </li>
+          <li class="list__item">
+            <div>
+              <img src="public/images/flag-bangladesh.gif" alt="Bangladesh flag">
+              Bangladesh:
+            </div>
+            <span class="population">164,662,809</span>
+          </li>
+          <li class="list__item">
+            <div>
+              <img src="public/images/flag-russia.gif" alt="Russia flag">
+              Russia:
+            </div>
+            <span class="population">145,933,461</span>
+          </li>
+          <li class="list__item">
+            <div>
+              <img src="public/images/flag-mexico.gif" alt="Mexico flag">
+              Mexico:
+            </div>
+            <span class="population">128,910,799</span>
+          </li>
+        </ol>
+        <p class="total">Total: <span class="total-population">Calculate it!</span></p>
+        <p class="average">Average: <span class="average-population">Calculate it!</span></p>
+      </div>
+      <div class="container">
+        <h1>Task 2: List of employees</h1>
+        <div class="task">
+          <p>Заполнить доску почета. Найти самого оплачиваемого сотрудника и вывести его данные вместо знаков вопроса. Данные брать с дата атрибутов</p>
+        </div>
+        <ul>
+          <li
+              data-position="Accountant"
+              data-salary="$162,700"
+              data-age="33"
+          >
+            Airi Satou
+          </li>
+          <li
+              data-position="Javascript Developer"
+              data-salary="$183,000"
+              data-age="29"
+          >
+            Michael Bruce
+          </li>
+          <li
+              data-position="Marketing Designer"
+              data-salary="$198,000"
+              data-age="66"
+          >
+            Michael Silva
+          </li>
+          <li
+              data-position="Technical Author"
+              data-salary="$145,000"
+              data-age="27"
+          >
+            Prescott Bartlett
+          </li>
+          <li
+              data-position="Developer"
+              data-salary="$98,540"
+              data-age="61"
+          >
+            Thor Walton
+          </li>
+          <li
+              data-position="Integration Specialist"
+              data-salary="$327,900"
+              data-age="55"
+          >
+            Rhona Davidson
+          </li>
+          <li
+              data-position="Data Coordinator"
+              data-salary="$138,575"
+              data-age="64"
+          >
+            Serge Baldwin
+          </li>
+          <li
+              data-position="Regional Director"
+              data-salary="$183,000"
+              data-age="51"
+          >
+            Shad Decker
+          </li>
+          <li
+              data-position="Regional Marketing"
+              data-salary="$163,000"
+              data-age="20"
+          >
+            Shou Itou
+          </li>
+          <li
+              data-position="Financial Controller"
+              data-salary="$452,500"
+              data-age="62"
+          >
+            Vivian Harrell
+          </li>
+          <li
+              data-position="Javascript Developer"
+              data-salary="$205,500"
+              data-age="39"
+          >
+            Colleen Hurst
+          </li>
+        </ul>
+      
+        <div class="honor-desk">
+          <h4>Самый оплачиваемый сотрудник</h4>
+          <div>
+            <span>Имя</span>
+            <span id="name">???</span>
+          </div>
+          <div>
+            <span>Зарплата</span>
+            <span id="salary">???</span>
+          </div>
+          <div>
+            <span>Возраст</span>
+            <span id="age">???</span>
+          </div>
+          <div>
+            <span>Позиция</span>
+            <span id="position">???</span>
+          </div>
+        </div>
+      </div>
+    <script src="script.js"></script>
 </body>
 </html>
