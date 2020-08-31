@@ -1,44 +1,36 @@
-function findMaxSalaryPerson(staff) {
-    const staffArr = [...staff];
+export function findMaxSalaryPerson(staff) {
+  const staffArr = [...staff];
 
-    staffArr.sort((liFirst, liSecond) => {
-        const salaryFirst = Number(liFirst.dataset.salary.replace(/[^0-9]/g, ""));
-        const salarySecond = Number(liSecond.dataset.salary.replace(/[^0-9]/g, ""));
+  staffArr.sort((salaryFirstStr, salarySecondStr) => {
+    function convertSalaryToNum(salaryStr) {
+      return Number(salaryStr.dataset.salary.replace(/[^0-9]/g, ""));
+    }
+    const salaryFirstNum = convertSalaryToNum(salaryFirstStr);
+    const salarySecondNum = convertSalaryToNum(salarySecondStr);
 
-        return salaryFirst - salarySecond;
-    });
+    return salaryFirstNum - salarySecondNum;
+  });
 
-    const {
-        textContent: name,
-        dataset: {
-            salary,
-            age,
-            position,
-        },
-    } = staffArr[staffArr.length - 1];
+  const {
+    textContent: name,
+    dataset: { salary, age, position },
+  } = staffArr[staffArr.length - 1];
 
-    const maxSalaryPerson = {
-        name,
-        salary,
-        age,
-        position,
-    };
+  const maxSalaryPerson = {
+    name,
+    salary,
+    age,
+    position,
+  };
 
-    return maxSalaryPerson;
+  return maxSalaryPerson;
 }
 
-function displayMaxSalaryPerson(maxSalaryPerson) {
-    const maxSalaryPersonKeys = Object.keys(maxSalaryPerson);
-    maxSalaryPersonKeys.forEach((personKey) => {
-        const resultFild = document.querySelector(`#${personKey}`);
-        resultFild.textContent = `: ${maxSalaryPerson[personKey]}`;
-    });
-}
+export function displayMaxSalaryPerson(maxSalaryPerson) {
+  const maxSalaryPersonKeys = Object.keys(maxSalaryPerson);
 
-function toDoTask2() {
-    const staff = document.querySelectorAll("li[data-position]");
-    const maxSalaryPerson = findMaxSalaryPerson(staff);
-    displayMaxSalaryPerson(maxSalaryPerson);
+  maxSalaryPersonKeys.forEach((personKey) => {
+    const resultFild = document.querySelector(`#${personKey}`);
+    resultFild.textContent = `: ${maxSalaryPerson[personKey]}`;
+  });
 }
-
-toDoTask2();
