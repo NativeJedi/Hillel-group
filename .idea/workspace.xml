@@ -25,6 +25,7 @@
     <list default="true" id="4ed3ffd3-c736-4874-91b4-509433ab88f5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,6 +128,7 @@
       <workItem from="1598709954458" duration="452000" />
       <workItem from="1598785324553" duration="122000" />
       <workItem from="1598785579307" duration="5000" />
+      <workItem from="1598906084383" duration="5430000" />
     </task>
     <servers />
   </component>
@@ -146,10 +148,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="501" y="119" width="713" height="600" key="#ESLint" timestamp="1598456223180">
+    <state x="501" y="119" width="713" height="600" key="#ESLint" timestamp="1598911441919">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="501" y="119" width="713" height="600" key="#ESLint/0.0.1280.800@0.0.1280.800" timestamp="1598456223180" />
+    <state x="501" y="119" width="713" height="600" key="#ESLint/0.0.1280.800@0.0.1280.800" timestamp="1598911441919" />
     <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1598162036882">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
