@@ -15,8 +15,8 @@ function prettify(num) {
   const sNum = num.toString();
   return sNum.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 }
-document.querySelector('[class = total-population]').innerHTML = prettify(totalPop);
-document.querySelector('[class = average-population]').innerHTML = prettify(averagePop);
+document.querySelector('.total-population').innerHTML = prettify(totalPop);
+document.querySelector('.average-population').innerHTML = prettify(averagePop);
 
 // Task 2
 
