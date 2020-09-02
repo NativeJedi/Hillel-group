@@ -47,7 +47,6 @@ list.addEventListener('click', (e) => {
 
 delButton.addEventListener('click', () => {
   const listElements = document.querySelectorAll('.list-item');
-  console.log(listElements);
   listElements.forEach((el) => {
     el.parentNode.removeChild(el);
   });
