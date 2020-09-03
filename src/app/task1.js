@@ -13,8 +13,8 @@ export function calcAverage(countries) {
   const countriesArr = [...countries];
 
   const totalPopulation = calcTotal(countriesArr);
-  const countiresCount = countriesArr.length;
-  const averagePopulation = totalPopulation / countiresCount;
+  const countriesCount = countriesArr.length;
+  const averagePopulation = totalPopulation / countriesCount;
 
   return averagePopulation;
 }
