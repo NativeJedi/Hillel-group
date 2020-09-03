@@ -1,18 +1,18 @@
-const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
-const CopyWebpackPlugin = require("copy-webpack-plugin");
-const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
-  entry: "./src/app/index.js",
+  entry: './src/app/index.js',
   output: {
-    filename: "main.js",
-    path: path.resolve(__dirname, "dist/app"),
+    filename: 'main.js',
+    path: path.resolve(__dirname, 'dist/app'),
   },
 
-  devtool: "source-map",
+  devtool: 'source-map',
 
   optimization: {
     minimizer: [new OptimizeCSSAssetsPlugin({})],
@@ -21,36 +21,36 @@ module.exports = {
   module: {
     rules: [
       {
-        enforce: "pre",
+        enforce: 'pre',
         test: /\.js$/,
         exclude: /node_modules/,
-        loader: "eslint-loader",
+        loader: 'eslint-loader',
       },
       {
         test: /\.m?js$/,
         exclude: /(node_modules|bower_components)/,
         use: {
-          loader: "babel-loader",
+          loader: 'babel-loader',
           options: {
-            presets: ["@babel/preset-env"],
+            presets: ['@babel/preset-env'],
           },
         },
       },
       {
         test: /\.css$/i,
-        use: [MiniCssExtractPlugin.loader, "css-loader"],
+        use: [MiniCssExtractPlugin.loader, 'css-loader'],
       },
       {
         test: /\.s[ac]ss$/i,
-        use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
       },
       {
         test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
         use: [
           {
-            loader: "file-loader",
+            loader: 'file-loader',
             options: {
-              name: "[name].[ext]",
+              name: '[name].[ext]',
             },
           },
         ],
@@ -60,14 +60,14 @@ module.exports = {
 
   devServer: {
     overlay: true,
-    contentBase: path.join(__dirname, "dist"),
+    contentBase: path.join(__dirname, 'dist'),
     compress: true,
     open: true,
   },
 
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.join(__dirname, "src/app/index.html"),
+      template: path.join(__dirname, 'src/app/index.html'),
       minify: {
         collapseWhitespace: true,
         removeComments: true,
@@ -83,8 +83,8 @@ module.exports = {
     new CopyWebpackPlugin({
       patterns: [
         {
-          from: path.join(__dirname, "src/public"),
-          to: path.join(__dirname, "dist/public"),
+          from: path.join(__dirname, 'src/public'),
+          to: path.join(__dirname, 'dist/public'),
         },
       ],
     }),

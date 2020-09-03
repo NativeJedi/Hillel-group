@@ -2,7 +2,7 @@ export function calcTotal(countries) {
   const countriesArr = [...countries];
 
   const totalPopulation = countriesArr.reduce((sum, country) => {
-    const populationNum = Number(country.textContent.replace(/[^0-9]/g, ""));
+    const populationNum = Number(country.textContent.replace(/[^0-9]/g, ''));
     return sum + populationNum;
   }, 0);
 
@@ -21,13 +21,13 @@ export function calcAverage(countries) {
 
 export function displayCalcData(calcResult, resultFieldSelector) {
   const resultField = document.querySelector(resultFieldSelector);
-  const calcResultArr = String(calcResult).split("");
+  const calcResultArr = String(calcResult).split('');
 
   for (let i = 1; i < calcResultArr.length; i++) {
     if (i % 3 === 0) {
-      calcResultArr[calcResultArr.length - i - 1] += ",";
+      calcResultArr[calcResultArr.length - i - 1] += ',';
     }
   }
 
-  resultField.textContent = ` ${calcResultArr.join("")}`;
+  resultField.textContent = ` ${calcResultArr.join('')}`;
 }

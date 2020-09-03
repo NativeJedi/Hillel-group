@@ -1,10 +1,11 @@
 export function findMaxSalaryPerson(staff) {
   const staffArr = [...staff];
 
+  function convertSalaryToNum(salaryStr) {
+    return Number(salaryStr.dataset.salary.replace(/[^0-9]/g, ''));
+  }
+
   staffArr.sort((salaryFirstStr, salarySecondStr) => {
-    function convertSalaryToNum(salaryStr) {
-      return Number(salaryStr.dataset.salary.replace(/[^0-9]/g, ""));
-    }
     const salaryFirstNum = convertSalaryToNum(salaryFirstStr);
     const salarySecondNum = convertSalaryToNum(salarySecondStr);
 
@@ -26,11 +27,12 @@ export function findMaxSalaryPerson(staff) {
   return maxSalaryPerson;
 }
 
+
 export function displayMaxSalaryPerson(maxSalaryPerson) {
   const maxSalaryPersonKeys = Object.keys(maxSalaryPerson);
 
   maxSalaryPersonKeys.forEach((personKey) => {
-    const resultFild = document.querySelector(`#${personKey}`);
-    resultFild.textContent = `: ${maxSalaryPerson[personKey]}`;
+    const resultField = document.querySelector(`#${personKey}`);
+    resultField.textContent = `: ${maxSalaryPerson[personKey]}`;
   });
 }
