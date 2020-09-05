@@ -24,18 +24,20 @@ averagePopulation.innerHTML = average;
 const employees = document.querySelectorAll('ul li');
 const employeesArr = [...employees];
 
-const highestPaidEmployee = employeesArr.reduce((employee, current) => {
+const highestPaidEmployee = employeesArr.reduce((highest, current) => {
     const currentSalary = +current.getAttribute('data-salary').slice(1).replace(/,/g, '');
-    const highest = employee.salary < currentSalary ? employee.salary = currentSalary : employee.salary;
-
-    if (employee.salary === currentSalary) {
-        employee.name = current.textContent;
-        employee.salary = highest;
-        employee.age = current.getAttribute('data-age');
-        employee.position = current.getAttribute('data-position');
+    
+    if (highest.salary > currentSalary) {
+      return highest;
     }
 
-    return employee;
+
+    return {
+        name: current.textContent,
+        salary: currentSalary,
+        age: current.getAttribute('data-age'),
+        position: current.getAttribute('data-position'),
+    };
 
 }, {
     name: '',
@@ -43,6 +45,8 @@ const highestPaidEmployee = employeesArr.reduce((employee, current) => {
     age: '',
     position: '',
 });
+
+
 
 const name = document.querySelector('#name');
 const salary = document.querySelector('#salary');
