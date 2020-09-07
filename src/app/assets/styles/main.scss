@@ -47,6 +47,13 @@ html {
   &__item {
     display: flex;
     align-items: stretch;
+
+    &.active {
+      .todo-list__input-text {
+        text-decoration: line-through;
+        color: green;
+      }
+    }
   }
 
   &__controls {
