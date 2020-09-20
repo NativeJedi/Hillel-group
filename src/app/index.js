@@ -4,8 +4,8 @@ import TodoList from './todo';
 class TodoApp extends TodoList {
   #list = {};
 
-  constructor(form, list, todoInput) {
-    super([]);
+  constructor(form, list, todoInput, allBtn, completedBtn, uncompletedBtn) {
+    super();
 
     this.#list = list;
 
@@ -16,13 +16,29 @@ class TodoApp extends TodoList {
 
       todoInput.value = '';
     });
+
+    this.renderTodos();
+
+    allBtn.addEventListener('click', () => {
+      this.renderTodos();
+    });
+
+    completedBtn.addEventListener('click', () => {
+      const todos = super.filterTodos('completed');
+      this.renderTodos(todos);
+    });
+
+    uncompletedBtn.addEventListener('click', () => {
+      const todos = super.filterTodos('uncompleted');
+      this.renderTodos(todos);
+    });
   }
 
-  renderTodos() {
+  renderTodos(todos = this.todos) {
     this.#list.innerHTML = '';
 
-    this.todos.forEach((todo) => {
-      const todoLi = TodoApp.createTodo(todo);
+    todos.forEach((todo) => {
+      const todoLi = this.createTodo(todo);
 
       this.#list.appendChild(todoLi);
     });
@@ -33,7 +49,29 @@ class TodoApp extends TodoList {
     this.renderTodos();
   }
 
-  static createTodo(todo) {
+  removeTodo(id) {
+    super.removeTodo(id);
+    this.renderTodos();
+  }
+
+  checkTodo(id, isDone) {
+    super.checkTodo(id, isDone);
+
+    const todoLi = document.getElementById(id);
+
+    if (isDone) {
+      todoLi.classList.add('active');
+    } else {
+      todoLi.classList.remove('active');
+    }
+  }
+
+  editTodo(id, text) {
+    super.editTodo(id, text);
+    this.renderTodos();
+  }
+
+  createTodo(todo) {
     const liElement = document.createElement('li');
     liElement.classList.add('todo-list__item', 'input-group', 'mb-3');
     liElement.id = todo.id;
@@ -44,9 +82,25 @@ class TodoApp extends TodoList {
 
     const todoItemInput = TodoApp.createTodoItemInput(todo.text);
     liElement.insertAdjacentElement('afterbegin', todoItemInput);
+    todoItemInput.addEventListener('blur', (e) => {
+      this.editTodo(todo.id, e.target.value);
+      todoItemInput.readOnly = true;
+    });
 
-    const checkbox = TodoApp.createCheckbox(liElement);
+    const checkbox = TodoApp.createCheckbox(todo.isDone, (e) => {
+      this.checkTodo(todo.id, e.target.checked);
+    });
+
     liElement.insertAdjacentElement('afterbegin', checkbox);
+
+    const editBtn = TodoApp.createEditButton(() => {
+      todoItemInput.readOnly = false;
+      todoItemInput.focus();
+    });
+    liElement.insertAdjacentElement('beforeend', editBtn);
+
+    const deleteBtn = TodoApp.createDeleteButton(() => this.removeTodo(todo.id));
+    liElement.insertAdjacentElement('beforeend', deleteBtn);
 
     return liElement;
   }
@@ -60,7 +114,7 @@ class TodoApp extends TodoList {
     return input;
   }
 
-  static createCheckbox() {
+  static createCheckbox(isDone, listener) {
     const checkboxWrapper = document.createElement('div');
 
     checkboxWrapper.classList.add('input-group-prepend');
@@ -71,19 +125,49 @@ class TodoApp extends TodoList {
     `;
 
     const checkbox = checkboxWrapper.querySelector('input');
-
-    checkbox.addEventListener('input', () => {});
+    checkbox.checked = isDone;
+    checkbox.addEventListener('input', listener);
 
     return checkboxWrapper;
+  }
+
+  static createDeleteButton(listener) {
+    const button = document.createElement('button');
+
+    button.classList.add('btn', 'btn-danger', 'btn-sm');
+    button.innerHTML = '<span class="material-icons">delete_outline</span>';
+
+    button.addEventListener('click', listener);
+
+    return button;
+  }
+
+  static createEditButton(listener) {
+    const editBtn = document.createElement('button');
+
+    editBtn.classList.add('btn', 'btn-warning', 'btn-sm');
+    editBtn.innerHTML = '<span class="material-icons">edit</span>';
+    editBtn.addEventListener('click', listener);
+
+    return editBtn;
   }
 }
 
 const todoForm = document.querySelector('.todo-app__form');
 const todoFormInput = document.querySelector('.todo-app__input');
 const todoList = document.querySelector('.todo-list');
+const allBtn = document.querySelector('#all');
+const completedBtn = document.querySelector('#completed');
+const uncompletedBtn = document.querySelector('#uncompleted');
 
-const todoApp = new TodoApp(todoForm, todoList, todoFormInput);
-todoApp.addTodo('asdassad');
+const todoApp = new TodoApp(
+  todoForm,
+  todoList,
+  todoFormInput,
+  allBtn,
+  completedBtn,
+  uncompletedBtn,
+);
 console.log(todoApp);
 
 /*
