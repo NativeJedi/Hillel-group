@@ -1,78 +1,62 @@
 @import "fonts";
+@import '~bootstrap/scss/bootstrap';
 
-.container {
+html {
+  font-family: Roboto, sans-serif;
+}
+
+.todo-app {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  max-width: 500px;
-  margin: 0 auto 30px auto;
-}
-
-p {
-  margin: 0;
-}
-
-body {
-  margin: 0;
-  font-family: Roboto, sans-serif;
-  counter-reset: section;
-}
-
-h1 {
-  text-align: center;
-}
-
-.list {
-  margin: 16px 0 0 0;
-  list-style: none;
-  padding: 0;
-  &__item {
-    margin: 8px;
-    border-bottom: 1px solid darkgrey;
+  align-items: center;
+  min-height: 100vh;
+  padding: 40px 20px;
+  width: 700px;
+  margin: 0 auto;
+  &__header {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  &__form {
     display: flex;
+    align-items: flex-start;
     justify-content: space-between;
-    padding: 4px 4px 4px 30px;
-    position: relative;
+  }
 
-    img {
-      margin-right: 8px;
-    }
+  &__input {
+    flex: 1;
+    margin-right: 20px;
+  }
 
-    &:before {
-      color: #565754;
-      counter-increment: section;
-      content: counter(section);
-      position: absolute;
-      top: 50%;
-      left: 5px;
-      transform: translateY(-60%);
-    }
+  &__tabs {
+    margin-top: auto;
   }
 }
 
-.task {
-  margin: 10px 0;
-  font-weight: 500;
-}
+.todo-list {
+  width: 100%;
 
-.total,
-.average, {
-  font-size: 20px;
-  &-population {
-    font-size: 24px;
-  }
-}
+  &__input-text[readonly] {
+    background-color: #fff;
 
-.nav {
-  max-width: 400px;
-  margin: 20px auto;
-  &-link {
-    display: block;
-    font-weight: bold;
-    font-size: 18px;
-
-    &:not(:last-child) {
-      margin-bottom: 20px;
+    &:focus {
+      box-shadow: none;
     }
+  }
+
+  &__item {
+    display: flex;
+    align-items: stretch;
+
+    &.active {
+      .todo-list__input-text {
+        text-decoration: line-through;
+        color: green;
+      }
+    }
+  }
+
+  &__controls {
+    margin-left: auto;
   }
 }

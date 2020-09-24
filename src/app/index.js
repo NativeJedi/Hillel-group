@@ -1,60 +1,78 @@
 import './assets/styles/main.scss';
 
-const array = document.querySelectorAll('[class = population]');
+const todoForm = document.querySelector('.todo-app__form');
+const todoFormInput = document.querySelector('.todo-app__input');
+const todoList = document.querySelector('.todo-list');
 
-const fixed = Array.prototype.slice.call(array);
+function createDeleteButton(liElement) {
+  const button = document.createElement('button');
 
-const sum = fixed.reduce((prev, next) => {
-  const el = next.innerHTML.replace(/[\s.,%]/g, '');
-  return prev + Number(el);
-}, 0);
+  button.classList.add('btn', 'btn-danger', 'btn-sm');
+  button.innerHTML = '<span class="material-icons">delete_outline</span>';
+  button.addEventListener('click', () => {
+    liElement.remove();
+  });
 
-function fixNumber(a) {
-  return a.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+  return button;
 }
 
-const aver = sum / array.length;
+function createCheckbox(liElement) {
+  const checkboxWrapper = document.createElement('div');
 
-const total = fixNumber(sum);
-const average = fixNumber(aver);
+  checkboxWrapper.classList.add('input-group-prepend');
+  checkboxWrapper.innerHTML = `
+    <div class="input-group-text">
+      <input type="checkbox">
+    </div>
+  `;
 
-document.querySelector('[class = total-population]').innerHTML = total;
-document.querySelector('[class = average-population]').innerHTML = average;
+  const checkbox = checkboxWrapper.querySelector('input');
 
-// Task 2
+  checkbox.addEventListener('input', () => {
+    const { checked } = checkbox;
+    if (checked) {
+      liElement.classList.add('active');
+    } else {
+      liElement.classList.remove('active');
+    }
+  });
 
-const salaryELements = document.querySelectorAll('li[data-salary]');
+  return checkboxWrapper;
+}
 
-const honorDesk = {
-  name: '',
-  salary: 0,
-  age: 0,
-  position: '',
-};
+function createTodoItemInput(todoText) {
+  const input = document.createElement('input');
 
-const topEmployee = [...salaryELements].reduce((desk, employeeEl) => {
-  const {
-    salary,
-    age,
-    position,
-  } = employeeEl.dataset;
+  input.value = todoText;
+  input.classList.add('todo-list__input-text', 'form-control');
+  input.readOnly = true;
 
-  const name = employeeEl.innerText;
-  const salaryAmount = +salary.replace(/[, $]/g, '');
+  return input;
+}
 
-  if (desk.salary > salaryAmount) {
-    return desk;
-  }
+function createTodoItem(todoText) {
+  const liElement = document.createElement('li');
+  liElement.classList.add('todo-list__item', 'input-group', 'mb-3');
 
-  return {
-    name,
-    salary: salaryAmount,
-    age,
-    position,
-  };
-}, honorDesk);
+  const todoItemInput = createTodoItemInput(todoText);
+  liElement.insertAdjacentElement('afterbegin', todoItemInput);
 
-document.querySelector('[id = name]').innerHTML = `- ${topEmployee.name}`;
-document.querySelector('[id = salary]').innerHTML = `- ${topEmployee.salary}`;
-document.querySelector('[id = age]').innerHTML = `- ${topEmployee.age}`;
-document.querySelector('[id = position]').innerHTML = `- ${topEmployee.position}`;
+  const checkbox = createCheckbox(liElement);
+  liElement.insertAdjacentElement('afterbegin', checkbox);
+
+  const deleteButton = createDeleteButton(liElement);
+  liElement.insertAdjacentElement('beforeend', deleteButton);
+
+  return liElement;
+}
+
+function addTodo(value) {
+  const todoItem = createTodoItem(value);
+  todoList.appendChild(todoItem);
+}
+
+todoForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  addTodo(todoFormInput.value);
+  todoFormInput.value = '';
+});
